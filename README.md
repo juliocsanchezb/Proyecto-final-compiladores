@@ -1,4 +1,5 @@
 Requisitos previos
+
 •	XAMPP 7.x o superior
 •	Apache y MySQL activos
 •	Script SQL incluido
