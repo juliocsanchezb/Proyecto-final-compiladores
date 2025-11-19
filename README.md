@@ -1,43 +1,70 @@
-Requisitos previos
 
-•	XAMPP 7.x o superior
-•	Apache y MySQL activos
-•	Script SQL incluido
-•	Usuario MySQL: root
-Instalación del proyecto
-1.	Clona o descarga el repositorio.
-2.	Copia la carpeta del proyecto en:
-3.	C:\xampp\htdocs\
-4.	Inicia Apache y MySQL desde XAMPP.
-Configuración de la base de datos (MySQL en puerto 1414)
-1. Confirmar el puerto
-En XAMPP: MySQL → Config → my.ini
-Verifica que incluya:
+# Requisitos Previos
+
+Para ejecutar correctamente este proyecto en un entorno local con XAMPP, es necesario contar con lo siguiente:
+
+- XAMPP 7.x o superior  
+- Servidor Apache activo  
+- Servidor MySQL activo  
+- MySQL configurado para correr en el puerto **1414**  
+- Archivo SQL del proyecto para importar la base de datos  
+- Usuario MySQL: **root** (sin contraseña por defecto en XAMPP)  
+- Carpeta del proyecto ubicada dentro de `htdocs`  
+
+# Instalación del Proyecto
+
+1. Clona o descarga el repositorio del proyecto en tu equipo.
+
+2. Copia la carpeta del proyecto dentro del directorio:
+```
+
+C:\xampp\htdocs\
+
+```
+
+3. Inicia **Apache** y **MySQL** desde el panel de control de XAMPP.
+
+4. Verifica que MySQL esté configurado en el puerto 1414 revisando el archivo:
+```
+
+C:\xampp\mysql\bin\my.ini
+
+```
+Debe contener:
+```
+
 [mysqld]
 port=1414
-2. Acceder a phpMyAdmin
-http://localhost/phpmyadmin/?server=1414
-Si no conecta, edita:
-C:\xampp\phpMyAdmin\config.inc.php
-y ajusta:
-$cfg['Servers'][$i]['port'] = '1414';
-3. Importar la base de datos
-1.	En phpMyAdmin, selecciona Importar.
-2.	Carga el archivo SQL del proyecto.
-4. Configurar credenciales en el proyecto
+
+```
+
+5. Accede a phpMyAdmin usando:
+```
+
+[http://localhost/phpmyadmin/?server=1414](http://localhost/phpmyadmin/?server=1414)
+
+```
+
+6. Importa la base de datos:
+- Ingresa a phpMyAdmin  
+- Selecciona **Importar**  
+- Carga el script `.sql` incluido en el proyecto  
+
+7. Configura las credenciales de conexión a la base de datos dentro del archivo de configuración del proyecto (por ejemplo `.env`, `config.php` o similar):
+```
+
 $host = '127.0.0.1:1414'; 
 $user = 'root';
 $password = '';
 $db = 'compiladoresfinal';
-Obtener la URL del proyecto
-Si el proyecto está dentro de htdocs, la ruta será:
-http://localhost/proyecto_final_compliadores/home/
-Para verificar:
-1.	Abre:
-2.	http://localhost/
-3.	Busca la carpeta del proyecto.
-Ejecución del sistema
-1.	Inicia Apache y MySQL.
-2.	Verifica que el sistema se conecta correctamente a la base de datos.
-3.	Accede en el navegador:
-4.	http://localhost/proyecto_final_compliadores/home /
+
+```
+
+8. Accede al proyecto desde el navegador usando:
+```
+
+[http://localhost/proyecto_final_compliadores/home/index.php/](http://localhost/proyecto_final_compliadores/home/index.php)
+
+```
+```
+
