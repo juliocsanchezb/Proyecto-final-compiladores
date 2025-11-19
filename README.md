@@ -41,7 +41,7 @@ port=1414
 5. Accede a phpMyAdmin usando:
 ```
 
-[http://localhost/phpmyadmin/?server=1414](http://localhost/phpmyadmin/?server=1414)
+http://localhost/phpmyadmin/?server=1414
 
 ```
 
