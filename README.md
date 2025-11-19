@@ -63,7 +63,7 @@ $db = 'compiladoresfinal';
 8. Accede al proyecto desde el navegador usando:
 ```
 
-[http://localhost/proyecto_final_compliadores/home/index.php/](http://localhost/proyecto_final_compliadores/home/index.php)
+http://localhost/proyecto_final_compliadores/home/index.php
 
 ```
 ```
